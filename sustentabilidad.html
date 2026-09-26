@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sustentabilidad, dónde comprar y contacto | EntoPan</title>
+  <meta name="description" content="Una mejor alimentación también puede cuidar el planeta. Encuentra EntoPan en puntos de venta seleccionados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="sustentabilidad">
+  <div data-include="header"></div>
+
+  <main>
+    <header class="page-title container">
+      <h1 class="reveal">Sustentabilidad</h1>
+      <p class="reveal" style="--d:.1s">Una mejor alimentación también puede cuidar el planeta.</p>
+    </header>
+
+    <section class="sust">
+      <div class="container sust__grid">
+        <div data-stagger=".12">
+          <article class="sust__item icon-pop">
+            <i data-icon="leaf"></i>
+            <div>
+              <h3>Menor impacto ambiental</h3>
+              <p>La producción de insectos requiere menos agua, tierra y genera menos emisiones de gases de efecto invernadero en comparación con otras fuentes de proteína.</p>
+            </div>
+          </article>
+          <article class="sust__item icon-pop">
+            <i data-icon="recycle"></i>
+            <div>
+              <h3>Aprovechamiento de recursos</h3>
+              <p>Utilizamos ingredientes que contribuyen a un sistema alimentario más eficiente y circular.</p>
+            </div>
+          </article>
+          <article class="sust__item icon-pop">
+            <i data-icon="seedling"></i>
+            <div>
+              <h3>Un futuro más sostenible</h3>
+              <p>Creemos en soluciones innovadoras que permitan alimentar a más personas cuidando los recursos del planeta.</p>
+            </div>
+          </article>
+        </div>
+        <div class="sust__photo img-zoom reveal from-right">
+          <img src="assets/img/sustentabilidad-brote.jpg" alt="Brote creciendo en tierra fértil" loading="lazy">
+          <p class="hand"><span class="write-on" style="display:block">Pequeños<br>cambios,<br>grandes<br>impactos.</span></p>
+        </div>
+      </div>
+      <div class="leaves" data-leaves></div>
+    </section>
+
+    <section class="container buy-contact">
+      <!-- DÓNDE COMPRAR -->
+      <div class="buy card reveal from-left" id="donde-comprar">
+        <h2>Dónde comprar</h2>
+        <p>Encuentra EntoPan en puntos de venta seleccionados y súmate a la alimentación del futuro.</p>
+        <div class="stores divided">
+          <a class="store" href="https://www.jumbo.cl" target="_blank" rel="noopener" aria-label="Jumbo">
+            <span class="store-jumbo">JUMBO<small>SUPERMERCADO</small></span>
+          </a>
+          <a class="store" href="https://www.lider.cl" target="_blank" rel="noopener" aria-label="Líder">
+            <span class="store-lider">Lider<svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#f5b400"><rect x="14.5" y="2" width="3" height="9" rx="1.5"/><rect x="14.5" y="21" width="3" height="9" rx="1.5"/><rect x="14.5" y="2" width="3" height="9" rx="1.5" transform="rotate(60 16 16)"/><rect x="14.5" y="21" width="3" height="9" rx="1.5" transform="rotate(60 16 16)"/><rect x="14.5" y="2" width="3" height="9" rx="1.5" transform="rotate(-60 16 16)"/><rect x="14.5" y="21" width="3" height="9" rx="1.5" transform="rotate(-60 16 16)"/></g></svg></span>
+          </a>
+          <a class="store" href="https://www.tottus.cl" target="_blank" rel="noopener" aria-label="Tottus">
+            <span class="store-tottus">TOTTUS</span>
+          </a>
+          <a class="store" href="#" data-action="stores" aria-label="Mercado Saludable">
+            <span class="store-mercado"><i data-icon="mercado"></i>Mercado<br>Saludable</span>
+          </a>
+        </div>
+        <a class="btn" href="#" data-action="stores">Ver mapa de puntos de venta <i data-icon="arrow"></i></a>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="contact card reveal from-right" id="contacto" style="--d:.1s">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas, sugerencias o quieres ser parte de EntoPan? ¡Escríbenos!</p>
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label class="sr-only" for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" placeholder="Nombre" autocomplete="name" required>
+            <span class="field__error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label class="sr-only" for="f-correo">Correo electrónico</label>
+            <input id="f-correo" name="correo" type="email" placeholder="Correo electrónico" autocomplete="email" required>
+            <span class="field__error" role="alert"></span>
+          </div>
+          <div class="field">
+            <label class="sr-only" for="f-mensaje">Mensaje</label>
+            <textarea id="f-mensaje" name="mensaje" placeholder="Mensaje" rows="3" required></textarea>
+            <span class="field__error" role="alert"></span>
+          </div>
+          <button class="btn btn--block" type="submit"><span>Enviar</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

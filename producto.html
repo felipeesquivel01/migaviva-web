@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuestro producto | EntoPan</title>
+  <meta name="description" content="Un pan funcional, nutritivo, delicioso y con propósito: alto en proteína, alto en fibra y sin sabor a insecto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="producto">
+  <div data-include="header"></div>
+
+  <main>
+    <header class="page-title container">
+      <h1 class="reveal">Nuestro producto</h1>
+      <p class="reveal" style="--d:.1s">Un pan funcional, nutritivo, delicioso y con propósito.</p>
+    </header>
+
+    <!-- HERO PRODUCTO -->
+    <section class="product-hero" id="producto-info">
+      <div class="container product-hero__grid">
+        <div class="product-hero__media reveal from-left">
+          <img src="assets/img/producto-hero.jpg" alt="Envase de EntoPan junto a pan de semillas rebanado">
+        </div>
+        <div class="product-hero__side">
+          <ul class="checklist">
+            <li class="reveal from-right" style="--d:.05s"><span class="check" style="--d:.2s"><i data-icon="check"></i></span>Alto en proteína</li>
+            <li class="reveal from-right" style="--d:.15s"><span class="check" style="--d:.3s"><i data-icon="check"></i></span>Alto en fibra</li>
+            <li class="reveal from-right" style="--d:.25s"><span class="check" style="--d:.4s"><i data-icon="check"></i></span>Rico en vitaminas y minerales</li>
+            <li class="reveal from-right" style="--d:.35s"><span class="check" style="--d:.5s"><i data-icon="check"></i></span>Sin sabor a insecto</li>
+            <li class="reveal from-right" style="--d:.45s"><span class="check" style="--d:.6s"><i data-icon="check"></i></span>Delicioso y versátil</li>
+          </ul>
+          <a class="btn btn--outline reveal" style="--d:.55s" href="#nutricion" data-action="nutrition">Ver información nutricional <i data-icon="arrow"></i></a>
+        </div>
+      </div>
+      <div class="leaves" data-leaves></div>
+      <div class="leaves l2" data-leaves></div>
+    </section>
+
+    <!-- 5 ATRIBUTOS -->
+    <section class="features5">
+      <div class="container divided" data-stagger=".08">
+        <div class="feat icon-pop"><i data-icon="bread"></i>Pan funcional<br>para el día a día</div>
+        <div class="feat icon-pop"><i data-icon="sprout"></i>Fuente de proteína<br>completa</div>
+        <div class="feat icon-pop"><i data-icon="wheat"></i>Rico en vitaminas<br>y minerales</div>
+        <div class="feat icon-pop"><i data-icon="globe"></i>Menor impacto<br>ambiental</div>
+        <div class="feat icon-pop"><i data-icon="heart"></i>Apto para toda<br>la familia</div>
+      </div>
+    </section>
+
+    <!-- INGREDIENTES -->
+    <section class="ingredients" id="ingredientes">
+      <div class="container ingredients__grid">
+        <div class="ingredients__card card reveal from-left">
+          <h2>Ingredientes de calidad</h2>
+          <p>Elaborado con harina de insecto de alta calidad, semillas naturales y cereales, para un pan nutritivo y con un sabor increíble.</p>
+          <a class="btn btn--outline" href="#" data-action="ingredients">Conoce nuestros ingredientes <i data-icon="arrow"></i></a>
+        </div>
+        <div class="ingredients__img img-zoom reveal from-right" style="--d:.1s">
+          <img src="assets/img/ingredientes.jpg" alt="Cuencos con harinas, semillas y cereales" loading="lazy">
+        </div>
+      </div>
+      <div class="leaves leaves--flip" data-leaves></div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

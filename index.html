@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EntoPan | Un pan para hoy, un mejor mañana</title>
+  <meta name="description" content="EntoPan es un pan funcional con proteína de insecto: nutrición real, sabor increíble y un impacto positivo en el planeta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="inicio">
+  <div data-include="header"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__media">
+        <img src="assets/img/hero-pan.jpg" alt="Pan EntoPan rebanado junto a su envase" data-parallax="0.06" class="reveal from-right" style="--d:.15s">
+        <p class="hero__note hand float">
+          <span class="write-on" style="display:block">Nutrición<br>que se nota</span>
+          <svg viewBox="0 0 34 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2c10 6 16 16 14 32"/><path d="M13 29l7 6 5-8"/></svg>
+        </p>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__title reveal">
+            <span class="l1">Un pan para hoy,</span>
+            <span>un mejor mañana.</span>
+          </h1>
+          <p class="hero__subtitle reveal" style="--d:.12s">Nutrición real, sabor increíble y un impacto positivo en el planeta.</p>
+          <div class="hero__features" data-stagger=".12">
+            <div class="hero__feature icon-pop"><i data-icon="dumbbell"></i>Alto en<br>proteína</div>
+            <div class="hero__feature icon-pop"><i data-icon="leaf"></i>Alto en<br>fibra</div>
+            <div class="hero__feature icon-pop"><i data-icon="globe"></i>Más<br>sustentable</div>
+          </div>
+          <div class="hero__cta reveal" style="--d:.3s">
+            <a class="btn" href="producto.html">Conoce EntoPan <i data-icon="arrow"></i></a>
+            <a class="btn btn--outline" href="sustentabilidad.html#donde-comprar">Compra aquí</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRANJA DE ATRIBUTOS -->
+    <section class="strip">
+      <div class="container divided" data-stagger=".1">
+        <div class="strip__item icon-pop"><i data-icon="wheat"></i><span>Ingredientes<br>innovadores y seguros</span></div>
+        <div class="strip__item icon-pop"><i data-icon="heart"></i><span>Delicioso y<br>versátil</span></div>
+        <div class="strip__item icon-pop"><i data-icon="people"></i><span>Aporta a un sistema<br>alimentario más sostenible</span></div>
+        <div class="strip__item icon-pop"><i data-icon="leaf"></i><span>Ideal para un estilo<br>de vida saludable</span></div>
+      </div>
+    </section>
+
+    <!-- QUÉ ES ENTOPAN -->
+    <section class="about" id="que-es">
+      <div class="container about__grid">
+        <div class="about__img img-zoom reveal from-left">
+          <img src="assets/img/que-es-entopan.jpg" alt="Pan de semillas rebanado sobre tabla de madera" loading="lazy">
+        </div>
+        <div class="about__card card reveal from-right" style="--d:.1s">
+          <h2>¿Qué es EntoPan?</h2>
+          <p>EntoPan es un pan funcional elaborado con harina de insecto, una fuente de proteína completa, de alta calidad y con un menor impacto ambiental. Combinamos nutrición, sabor y sustentabilidad, ofreciendo una alternativa innovadora para quienes buscan alimentarse bien y cuidar el planeta.</p>
+          <a class="btn" href="nosotros.html">Conoce más sobre nosotros <i data-icon="arrow"></i></a>
+          <div class="leaves" data-leaves></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

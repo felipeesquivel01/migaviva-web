@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recetas | EntoPan</title>
+  <meta name="description" content="Ideas simples y deliciosas para disfrutar EntoPan en cualquier momento del día.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="recetas">
+  <div data-include="header"></div>
+
+  <main>
+    <header class="page-title container">
+      <h1 class="reveal">Recetas</h1>
+      <p class="reveal" style="--d:.1s">Ideas simples y deliciosas para disfrutar EntoPan en cualquier momento del día.</p>
+    </header>
+
+    <section class="recipes">
+      <div class="container">
+        <div class="filters reveal" id="recipe-filters" role="toolbar" aria-label="Filtrar recetas" style="--d:.15s"></div>
+        <div class="recipes__grid" id="recipes-grid"></div>
+        <p class="recipes__empty">No hay recetas en esta categoría todavía.</p>
+        <div class="recipes__more reveal">
+          <button class="btn" type="button" id="all-recipes">Ver todas las recetas <i data-icon="arrow"></i></button>
+        </div>
+      </div>
+      <div class="leaves tr" data-leaves></div>
+      <div class="leaves leaves--flip bl" data-leaves></div>
+      <div class="leaves br" data-leaves></div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
