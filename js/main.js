@@ -1,5 +1,5 @@
 /* =========================================================
-   EntoPan — Lógica del sitio
+   MigaViva — Lógica del sitio
    ========================================================= */
 (function () {
   'use strict';
@@ -21,8 +21,8 @@
 
   /* ---------- Header y footer compartidos ---------- */
   function logoHTML(tag = 'a') {
-    return `<${tag} class="logo" ${tag === 'a' ? 'href="index.html" aria-label="EntoPan, ir al inicio"' : ''}>
-      <i data-icon="logo"></i><span class="logo__text">EntoPan<sup>®</sup></span></${tag}>`;
+    return `<${tag} class="logo" ${tag === 'a' ? 'href="index.html" aria-label="MigaViva, ir al inicio"' : ''}>
+      <img src="assets/img/logo-migaviva.png" alt="MigaViva" width="520" height="259"></${tag}>`;
   }
 
   function buildHeader() {
@@ -64,7 +64,7 @@
               </div>
             </div>
             <div>
-              <h4>EntoPan</h4>
+              <h4>MigaViva</h4>
               <ul>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="producto.html">Producto</a></li>
@@ -89,8 +89,8 @@
             </div>
           </div>
           <div class="footer__bottom">
-            <span>© ${year} EntoPan. Todos los derechos reservados.</span>
-            <span>Pequeños ingredientes, grandes cambios.</span>
+            <span>© ${year} MigaViva. Todos los derechos reservados.</span>
+            <span class="footer__tagline">Una marraqueta con más futuro</span>
           </div>
         </div>
       </footer>
@@ -350,7 +350,7 @@
 
   function openIngredients() {
     openModal(`
-      <div class="modal__hero"><img src="assets/img/ingredientes.jpg" alt="Ingredientes de EntoPan"></div>
+      <div class="modal__hero"><img src="assets/img/ingredientes.jpg" alt="Ingredientes de MigaViva"></div>
       <div class="modal__body">
         <h2>Nuestros ingredientes</h2>
         <p>Seleccionados para darte más nutrición en cada rebanada.</p>
@@ -368,7 +368,7 @@
           <li><strong>La pregunta</strong>¿Cómo alimentar mejor a más personas usando menos recursos del planeta?</li>
           <li><strong>La investigación</strong>Descubrimos en la harina de insecto una proteína completa, nutritiva y con una huella ambiental mucho menor.</li>
           <li><strong>El pan</strong>Elegimos el alimento más cotidiano de nuestra mesa para que el cambio fuera simple, rico y accesible.</li>
-          <li><strong>Hoy</strong>EntoPan llega a puntos de venta seleccionados y sigue creciendo junto a una comunidad que quiere comer mejor.</li>
+          <li><strong>Hoy</strong>MigaViva llega a puntos de venta seleccionados y sigue creciendo junto a una comunidad que quiere comer mejor.</li>
         </ul>
       </div>`, { label: 'Nuestra historia' });
   }
@@ -377,7 +377,7 @@
     openModal(`
       <div class="modal__body">
         <h2>Puntos de venta</h2>
-        <p>Encuentra EntoPan en estas cadenas y tiendas.</p>
+        <p>Encuentra MigaViva en estas cadenas y tiendas.</p>
         <ul class="store-list">${STORES.map((s) => `<li><a href="${s.url}" ${s.url !== '#' ? 'target="_blank" rel="noopener"' : ''}>${iconSVG('pin')}<span><strong>${s.name}</strong><small>${s.note}</small></span></a></li>`).join('')}</ul>
         <iframe class="map-frame" title="Mapa de puntos de venta" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           src="https://www.google.com/maps?q=supermercado%20Jumbo%20Lider%20Tottus%20Santiago%20Chile&output=embed"></iframe>
@@ -471,9 +471,9 @@
       const data = Object.fromEntries(new FormData(form));
       setTimeout(() => {
         try {
-          const saved = JSON.parse(localStorage.getItem('entopan-mensajes') || '[]');
+          const saved = JSON.parse(localStorage.getItem('migaviva-mensajes') || '[]');
           saved.push({ ...data, fecha: new Date().toISOString() });
-          localStorage.setItem('entopan-mensajes', JSON.stringify(saved));
+          localStorage.setItem('migaviva-mensajes', JSON.stringify(saved));
         } catch (_) { /* almacenamiento no disponible */ }
         btn.classList.remove('is-loading');
         btn.lastChild.textContent = 'Enviar';
@@ -503,8 +503,19 @@
   initButtons();
   initRecipes();
   initContactForm();
-  initReveal();
   initParallax();
-  $('main')?.classList.add('page-enter');
-  if (location.hash) window.addEventListener('load', () => goToHash(location.hash, false));
+  // Las animaciones de entrada esperan a que termine la pantalla de carga (js/loader.js)
+  const startPage = () => {
+    initReveal();
+    $('main')?.classList.add('page-enter');
+  };
+  if (window.MV_LOADER_ACTIVE) {
+    document.addEventListener('migaviva:ready', () => {
+      startPage();
+      if (location.hash) goToHash(location.hash, false);
+    }, { once: true });
+  } else {
+    startPage();
+    if (location.hash) window.addEventListener('load', () => goToHash(location.hash, false));
+  }
 })();

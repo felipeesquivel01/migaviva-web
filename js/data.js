@@ -8,8 +8,8 @@ const RECIPES = [
     time: 10, level: 'Fácil',
     categories: ['desayunos', 'saludables'],
     portions: 2,
-    ingredients: ['2 rebanadas de EntoPan', '1 bola de mozzarella fresca', '6 tomates cherry', 'Hojas de albahaca y rúcula', 'Aceite de oliva, sal y pimienta'],
-    steps: ['Tuesta las rebanadas de EntoPan hasta que estén doradas.', 'Corta la mozzarella y los tomates cherry por la mitad.', 'Arma la tostada con rúcula, mozzarella y tomates.', 'Termina con albahaca, un chorrito de aceite de oliva, sal y pimienta.'],
+    ingredients: ['2 rebanadas de MigaViva', '1 bola de mozzarella fresca', '6 tomates cherry', 'Hojas de albahaca y rúcula', 'Aceite de oliva, sal y pimienta'],
+    steps: ['Tuesta las rebanadas de MigaViva hasta que estén doradas.', 'Corta la mozzarella y los tomates cherry por la mitad.', 'Arma la tostada con rúcula, mozzarella y tomates.', 'Termina con albahaca, un chorrito de aceite de oliva, sal y pimienta.'],
   },
   {
     id: 'sandwich-pollo-palta',
@@ -18,7 +18,7 @@ const RECIPES = [
     time: 15, level: 'Fácil',
     categories: ['almuerzos'],
     portions: 1,
-    ingredients: ['2 rebanadas de EntoPan', '100 g de pechuga de pollo cocida', '½ palta', 'Lechuga y tomate', 'Mostaza o mayonesa liviana'],
+    ingredients: ['2 rebanadas de MigaViva', '100 g de pechuga de pollo cocida', '½ palta', 'Lechuga y tomate', 'Mostaza o mayonesa liviana'],
     steps: ['Desmenuza o corta el pollo en láminas.', 'Muele la palta con una pizca de sal y limón.', 'Unta el pan con la palta y agrega lechuga, tomate y pollo.', 'Cierra, corta en diagonal y disfruta.'],
   },
   {
@@ -28,18 +28,18 @@ const RECIPES = [
     time: 10, level: 'Fácil',
     categories: ['colaciones', 'saludables'],
     portions: 4,
-    ingredients: ['4 rebanadas de EntoPan', '3 tomates maduros', '1 diente de ajo', 'Queso crema', 'Albahaca, aceite de oliva y sal'],
+    ingredients: ['4 rebanadas de MigaViva', '3 tomates maduros', '1 diente de ajo', 'Queso crema', 'Albahaca, aceite de oliva y sal'],
     steps: ['Pica los tomates en cubos y alíñalos con aceite, sal y albahaca.', 'Tuesta el pan y frótalo suavemente con ajo.', 'Unta una capa fina de queso crema.', 'Corona con el tomate y sirve de inmediato.'],
   },
   {
-    id: 'panqueques-entopan',
-    title: 'Panqueques de EntoPan',
+    id: 'panqueques-migaviva',
+    title: 'Panqueques de MigaViva',
     img: 'assets/img/receta-panqueques.jpg',
     time: 20, level: 'Media',
     categories: ['desayunos'],
     portions: 3,
-    ingredients: ['1 taza de migas de EntoPan', '2 huevos', '¾ taza de leche o bebida vegetal', '1 cda. de miel', 'Frutos rojos para servir'],
-    steps: ['Procesa las migas de EntoPan hasta obtener una harina fina.', 'Mezcla con los huevos, la leche y la miel hasta lograr una masa homogénea.', 'Cocina porciones en un sartén caliente, 2 minutos por lado.', 'Sirve apilados con frutos rojos y un toque de miel.'],
+    ingredients: ['1 taza de migas de MigaViva', '2 huevos', '¾ taza de leche o bebida vegetal', '1 cda. de miel', 'Frutos rojos para servir'],
+    steps: ['Procesa las migas de MigaViva hasta obtener una harina fina.', 'Mezcla con los huevos, la leche y la miel hasta lograr una masa homogénea.', 'Cocina porciones en un sartén caliente, 2 minutos por lado.', 'Sirve apilados con frutos rojos y un toque de miel.'],
   },
   {
     id: 'hamburguesa-vegetal',
@@ -48,7 +48,7 @@ const RECIPES = [
     time: 25, level: 'Media',
     categories: ['almuerzos', 'saludables'],
     portions: 2,
-    ingredients: ['2 panes EntoPan', '2 hamburguesas de legumbres', 'Queso laminado', 'Lechuga, tomate y cebolla morada', 'Salsa a elección'],
+    ingredients: ['2 panes MigaViva', '2 hamburguesas de legumbres', 'Queso laminado', 'Lechuga, tomate y cebolla morada', 'Salsa a elección'],
     steps: ['Cocina las hamburguesas vegetales a fuego medio, 4 minutos por lado.', 'Agrega el queso al final para que se funda.', 'Tuesta el pan por dentro.', 'Arma con lechuga, tomate, cebolla, la hamburguesa y tu salsa favorita.'],
   },
   {
@@ -58,7 +58,7 @@ const RECIPES = [
     time: 10, level: 'Fácil',
     categories: ['desayunos', 'colaciones'],
     portions: 2,
-    ingredients: ['2 rebanadas de EntoPan', 'Yogur griego o queso crema', 'Frambuesas, arándanos y frutillas', '1 cdta. de miel', 'Menta fresca'],
+    ingredients: ['2 rebanadas de MigaViva', 'Yogur griego o queso crema', 'Frambuesas, arándanos y frutillas', '1 cdta. de miel', 'Menta fresca'],
     steps: ['Tuesta el pan ligeramente.', 'Unta una capa generosa de yogur griego.', 'Distribuye los frutos rojos encima.', 'Termina con miel y hojas de menta.'],
   },
 ];
@@ -105,7 +105,7 @@ const STORES = [
 /* Índice para el buscador del header */
 const SEARCH_INDEX = [
   { title: 'Inicio', text: 'Un pan para hoy, un mejor mañana. Nutrición real', url: 'index.html' },
-  { title: '¿Qué es EntoPan?', text: 'pan funcional harina de insecto proteína completa', url: 'index.html#que-es' },
+  { title: '¿Qué es MigaViva?', text: 'pan funcional harina de insecto proteína completa', url: 'index.html#que-es' },
   { title: 'Nosotros', text: 'misión visión valores innovación sustentabilidad salud transparencia calidad historia', url: 'nosotros.html' },
   { title: 'Nuestro producto', text: 'alto en proteína fibra vitaminas minerales sin sabor a insecto', url: 'producto.html' },
   { title: 'Información nutricional', text: 'tabla nutricional calorías proteínas', url: 'producto.html#nutricion' },
